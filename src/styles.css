@@ -1,0 +1,86 @@
+@import "~normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-auto-rows: 300px;
+  padding-bottom: 20px;
+}
+
+.header {
+  grid-column: 1/-1;
+  margin-left: 40px;
+}
+
+.tagsList {
+  grid-column: 1/-1;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.courseList {
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 700px));
+  grid-gap: 10px;
+  justify-content: space-around;
+}
+
+.courseCard {
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 1fr;
+  min-height: 30vh;
+  max-width: 300px;
+  max-height: 400px;
+  width: 70%;
+  height: 60vh;
+  align-self: center;
+  margin: auto;
+}
+
+.courseCardTitle {
+  align-self: start;
+  margin-bottom: 15px;
+}
+.courseImg {
+  width: 75%;
+  height: 75%;
+}
+
+.tagButton {
+  border: none;
+  color: white;
+  background: rgb(78, 78, 78);
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.tagButton:hover {
+  box-shadow: 2px 2px darkgray;
+}
+
+.tagButton[data-active="true"] {
+  background: #6400e4;
+}
